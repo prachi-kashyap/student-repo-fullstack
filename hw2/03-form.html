@@ -14,6 +14,32 @@
   <body class="bg-dark">
     <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
       <h1 class="mt-2 mb-4">Contact Form</h1>
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="name" class="form-control" id="name" required="true">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" class="form-control" id="email" required="true">
+      </div>
+    <br/>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea2">Submit your message:</label>
+      <textarea class="form-control rounded-0" id="feedback" rows="3"></textarea>
+    </div>
+    <br/>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="checkVal">
+      <label class="form-check-label" for="flexCheckDefault">
+        Sign up for the newsletter
+      </label>
+    </div>
+      <br/>
+      <div class = "row">
+      <button type="submit" class="btn btn-primary" onclick="handleSubmit()" style="width:49%; margin-right:1%">Submit</button>
+      <button type="reset" class="btn btn-secondary" style="width:49%; margin-left:1%">Reset</button>
+    </div>
     </form>
   </body>
 </html>
