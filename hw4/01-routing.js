@@ -52,10 +52,9 @@ app.get('/cache', function (req, res) {
 });
 
 app.get('/cookie', function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.set({ 'Content-Type': 'text/plain' });
     res.cookie('hello', 'world');
-    res.write('cookies... yummm');
-    res.end();
+    res.send('cookies... yummm');
 });
 
 app.get('*', function (req, res) {

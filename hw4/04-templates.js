@@ -22,8 +22,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/capitals', async (req, res) => {
-    // map the output array to create an array with country names and capitals
-    // check for empty data in the output array
     getCountries((data) => {
         let countryAndCapitals = data
             .map((response) => {
@@ -41,9 +39,6 @@ app.get('/capitals', async (req, res) => {
 });
 
 app.get('/populous', (req, res) => {
-    // filter the output array for the countries with population of 50 million or more
-    // sort the resulting array to show the results in order of population
-    // map the resulting array into a new array with the country name and formatted population
     getCountries((data) => {
         const result = data
             .filter((response) => response.population > 50000000)
@@ -59,8 +54,6 @@ app.get('/populous', (req, res) => {
 });
 
 app.get('/regions', (req, res) => {
-    // reduce the output array in a resulting object that will feature the numbers of countries in each region
-    // disregard empty data from the output array
     getCountries((data) => {
         const regionsData = data.reduce((accumulator, randomNumber) => {
             accumulator[randomNumber.region] = ++accumulator[randomNumber.region] || 0;
